@@ -1,0 +1,85 @@
+<header class="section-header">
+
+  <nav class="navbar navbar-dark navbar-expand p-0 bg-dark">
+  <div class="container-fluid">
+      <ul class="navbar-nav d-none d-md-flex mr-auto">
+        <ng-container><li class="nav-item"><a class="nav-link" href="#" data-abc="true" routerLink="user-register">Login</a></li></ng-container>
+      </ul>
+      <ul class="navbar-nav d-flex align-items-center">
+        <li class="nav-item">
+          <!-- <div class="d-flex flex-row">
+            <img src="https://i.imgur.com/EYFtR83.jpg" class="rounded-circle" width="30">
+          </div> -->
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link d-flex align-items-center" data-abc="true"><span>{{user}}</span><i class='bx bxs-chevron-down'></i></a>
+        </li>
+        <ul class="navbar-nav d-none d-md-flex mr-auto">
+          <ng-container><li class="nav-item"><a class="nav-link" href="#" data-abc="true" (click)="logOut()" routerLink="home">Logout</a></li></ng-container>
+        </ul>
+          
+      </ul> <!-- list-inline //  -->
+    </div> <!-- navbar-collapse .// -->
+   <!-- container //  -->
+  </nav> <!-- header-top-light.// -->
+  
+  <section class="header-main border-bottom bg-white">
+      <div class="container-fluid">
+         <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+             <div class="col-md-2">
+                 <!-- <img  class="d-none d-md-flex" src="https://img.freepik.com/premium-photo/hand-holding-shopping-bags-plain-background_23-2148286215.jpg?w=2000" width="100"> -->
+                 <strong style="font-size: 30px;">Online Cart</strong>
+             </div>
+             <div class="col-md-8">
+          <div class="d-flex form-inputs">
+          <input class="form-control" type="text" placeholder="Search any product">
+          <i class="bx bx-search"></i>
+          </div>
+             </div>
+             
+             <div class="col-md-2">
+                 <div class="d-flex d-none d-md-flex flex-row align-items-center">
+                  <button routerLink="cart" class="btn btn-primary">
+                    <i style="font-size: 25px;" class="fas fa-cart-plus"></i>
+                    <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+                </button>
+                     <div class="d-flex flex-column ms-2">
+                         <strong class="qty">Cart</strong>
+                         <!-- <span class="fw-bold">$27.90</span> -->
+                     </div>    
+                 </div>           
+             </div>
+         </div>
+      </div> 
+  </section>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-md-none d-md-flex" href="#">Categories</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" routerLink="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="showAll();" href="#"  routerLink="products/1" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              All products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="showByCategory('Electronics');"  routerLink="products/2">Electronics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="showByCategory('Fashion');"  routerLink="products/3">Fashion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="showByCategory('Furnitures');"  routerLink="products/4">Furnitures</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>

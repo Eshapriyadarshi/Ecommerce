@@ -1,0 +1,54 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="wrapper">
+            
+
+    <div class="container">
+
+        <div class="row g-1">
+
+            
+
+           <div class="col-md-3" *ngFor="let product of productList">
+  
+
+        <div class="card p-3">
+
+            <div class="text-center">
+                <!-- <h1>{{product}}</h1> -->
+              <img src="{{product.imageUrl}}" class="card-img img-fluid" width="300px" height="300px" alt="">
+                
+            </div>
+
+            <div class="product-details">
+
+                
+                 <span class="font-weight-bold d-block">cost : {{product.price}}</span>
+                 <span>{{product.name}}</span>
+
+
+                 <div class="buttons d-flex flex-row">
+                    <div class="cart"><i class="fa fa-shopping-cart"></i></div> 
+                    <button type="button" (click)="addProduct(product)" class="btn btn-success cart-button btn-block flex-fill"><span class="dot">1</span>Add to cart </button>
+                </div>
+                <div class="buttons d-flex flex-row"> 
+                    <button type="button" (click)="viewproduct(product)" routerLink="/singleproduct" class="btn btn-success cart-button btn-block flex-fill"><span class="dot">1</span>View Details </button>
+                </div>
+
+            </div>
+
+
+            
+        </div>
+        
+
+    </div>
+
+
+    
+    
+</div>
+        
+    </div>
+
+
+</div>
